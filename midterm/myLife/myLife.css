@@ -1,0 +1,88 @@
+body {background-color: #fffacd}
+
+h1 {
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 100px;
+  margin: 0px
+}
+
+.images {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  margin: 0px;
+  position: absolute;
+  align-items:center;
+  justify-content:center;
+
+}
+
+.image {
+
+	margin:0px;
+	display:inline-block;
+	position:relative;
+	font-size: 35px;
+	text-align:center;
+  filter: grayscale(100%);
+}
+
+.active {
+  filter: grayscale(0%);
+}
+
+.image:hover {
+  filter: grayscale(0%);
+  transition: all 0.6s ease;
+}
+.image span {
+
+  font-family: PumpkinCheesecakeRegular;
+  src: url(assets/PumpkinCheesecake.otf);
+	height: 50px;
+	position: relative;
+	bottom: 50px;
+	color:#ccccff;
+	padding: 3px;
+	display:block;
+	opacity: 0;
+	transition: 0.4s opacity;
+  margin: 0px;
+	background: #fffacd; color: #000000; font-family: 'PT Sans', sans-serif;
+	font-size: 15px;
+	width: 250px;
+}
+
+.image:hover span {
+  opacity: 1;
+}
+
+
+img {
+  height: 350px;
+  width: 250px;
+}
+
+
+@media all and (max-width: 750px) {
+  .images {
+    width: 100%;
+}
+
+  @media all and (max-width: 1070px) {
+    .images {
+      width: 90%;
+}
+
+
+
+  #images {
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 255, 0.5);
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 0px;
+}

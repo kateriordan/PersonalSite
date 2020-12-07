@@ -1,0 +1,35 @@
+body{
+background-color: #FF6127;
+font-family: 'Open Sans', sans-serif;
+color: white;
+}
+
+
+h2{
+color: white;
+font-size: 50px;
+margin-bottom:0px;
+}
+
+.questions {
+  display: inline-block;
+}
+
+.set {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(2, 0px);
+  grid-gap: 250px;
+  margin-bottom:200px;
+}
+
+.box {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+input {
+  height: 250px;
+  width: 350px;
+}

@@ -1,0 +1,99 @@
+myYear = int(input("What year? "))
+myMonth = input("What month? ")
+myDay = int(input("What day? "))
+mMonth = 0;
+dayMonth = 0;
+year1 = 1000;
+day1 = 3;
+
+yearsSince1900 = myYear-year1;
+
+if (myYear % 4 == 0 and myYear % 100 != 0) or myYear % 400 == 0:
+  isleapyear = True
+else:
+  isleapyear = False
+
+for x in range(yearsSince1900):
+  if (x % 4 == 0 and x % 100 != 0) or x % 400 == 0:
+    day1 = day1 + 2
+  else:
+    day1 = day1 + 1
+
+startingDay = day1 % 7;
+print(startingDay)
+def newMonth(myMonth,mMonth,isleapyear):
+  if myMonth == "January" or myMonth == "january":
+    mMonth = 0
+    dayMonth = myDay + startingDay - 1
+  elif myMonth == "February" or myMonth == "february":
+    mMonth = 1
+    dayMonth = 31 + myDay + startingDay - 1
+  elif myMonth == "March" or myMonth == "march":
+    mMonth = 2
+    dayMonth = 59 + myDay + startingDay - 1
+    if isleapyear == True:
+      dayMonth = dayMonth + 1
+  elif myMonth == "April" or myMonth == "april":
+    mMonth = 3
+    dayMonth = 90 + myDay + startingDay - 1
+    if isleapyear == True:
+      dayMonth = dayMonth + 1
+  elif myMonth == "May" or myMonth == "may":
+    mMonth = 4
+    dayMonth = 120 + myDay + startingDay - 1
+    if isleapyear == True:
+      dayMonth = dayMonth + 1
+  elif myMonth == "June" or myMonth == "june":
+    mMonth = 5
+    dayMonth = 151 + myDay + startingDay - 1
+    if isleapyear == True:
+      dayMonth = dayMonth + 1
+  elif myMonth == "July" or myMonth == "july":
+    mMonth = 6
+    dayMonth = 181 + myDay + startingDay - 1
+    if isleapyear == True:
+      dayMonth = dayMonth + 1
+  elif myMonth == "August" or myMonth == "august":
+    mMonth == 7
+    dayMonth = 212 + myDay + startingDay - 1
+    if isleapyear == True:
+      dayMonth = dayMonth + 1
+  elif myMonth == "September" or myMonth == "september":
+    mMonth = 8
+    dayMonth = 243 + myDay + startingDay - 1
+    if isleapyear == True:
+      dayMonth = dayMonth + 1
+  elif myMonth == "October" or myMonth == "october":
+    mMonth = 9
+    dayMonth = 273 + myDay + startingDay - 1
+    if isleapyear == True:
+      dayMonth = dayMonth + 1
+  elif myMonth == "November" or myMonth == "november":
+    mMonth = 10
+    dayMonth = 304 + myDay + startingDay - 1
+    if isleapyear == True:
+      dayMonth = dayMonth + 1
+  elif myMonth == "December" or myMonth == "december":
+    mMonth = 11
+    dayMonth = 334 + myDay + startingDay - 1
+    if isleapyear == True:
+      dayMonth = dayMonth + 1
+  dayOfWeek(dayMonth);
+
+def dayOfWeek(dayMonth):
+  if dayMonth % 7 == 0:
+    print("That day was a Sunday")
+  elif dayMonth % 7 == 1:
+    print("That day was a Monday")
+  elif dayMonth % 7 == 2:
+    print("That day was a Tuesday")
+  elif dayMonth % 7 == 3:
+    print("That day was a Wednesday")
+  elif dayMonth % 7 == 4:
+    print("That day was a Thursday")
+  elif dayMonth % 7 == 5:
+    print("That day was a Friday")
+  elif dayMonth % 7 == 6:
+    print("That day was a Saturday")
+
+newMonth(myMonth,mMonth,isleapyear);
